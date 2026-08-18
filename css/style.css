@@ -308,9 +308,19 @@ a { color: var(--color-ink); text-decoration: none; }
 }
 
 .hero__illustration {
-  width: min(720px, 92vw);
+  width: min(560px, 92vw);
   margin: 22px auto 6px;
+  aspect-ratio: 1200 / 790;
+  overflow: hidden;
+  position: relative;
   animation: illustrationFloat 7s ease-in-out infinite;
+}
+.hero__illustration img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(-18.7%);
+  mix-blend-mode: darken;
 }
 @keyframes illustrationFloat {
   0%, 100% { transform: translateY(0); }
